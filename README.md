@@ -33,3 +33,9 @@ A simple image processing tool built using **Flask** and **React**. This project
 ```sh
 git clone https://github.com/prajjwal-17/Image-Enhancer.git
 cd Image-Enhancer
+
+# Backend Setup
+
+## Install dependencies globally (without virtual environment):
+```sh
+pip install -r requirements.txt
