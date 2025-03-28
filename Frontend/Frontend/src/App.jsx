@@ -139,6 +139,8 @@ export default function ImageProcessor() {
           <button onClick={() => processImage("histogram")} className="btn">Histogram</button>
           <button onClick={() => processImage("smooth")} className="btn">Smooth</button>
           <button onClick={() => processImage("sharpen")} className="btn">Sharpen</button>
+          <button onClick={() => processImage("highpass")} className="btn">High-Pass</button>
+          <button onClick={() => processImage("lowpass")} className="btn">Low-Pass</button>
         </div>
       )}
 
@@ -174,19 +176,17 @@ export default function ImageProcessor() {
 
       {/* Footer */}
       <motion.div
-  className="absolute bottom-4 right-4 bg-gray-800/80 text-gray-300 text-sm px-4 py-2 rounded-lg shadow-lg border border-gray-600"
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
->
-  Project by <span className="font-semibold text-blue-400">Prajjwal Rawat</span>  
-  <br />
-  Req. No: <span className="text-purple-400">RA2311026010224</span> | Sec: <span className="text-green-400">AE-1</span>
-  <br />
-  <span className="text-white">Project submitted to:</span> <span className="text-yellow-400 font-semibold">Dr. S Nagar</span>
-</motion.div>
-
-
+        className="absolute bottom-4 right-4 bg-gray-800/80 text-gray-300 text-sm px-4 py-2 rounded-lg shadow-lg border border-gray-600"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        Project by <span className="font-semibold text-blue-400">Prajjwal Rawat</span>  
+        <br />
+        Req. No: <span className="text-purple-400">RA2311026010224</span> | Sec: <span className="text-green-400">AE-1</span>
+        <br />
+        <span className="text-white">Project submitted to:</span> <span className="text-yellow-400 font-semibold">Dr. S Nagar</span>
+      </motion.div>
     </div>
   );
 }

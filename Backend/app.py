@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-from processing import convert_grayscale, quantize_image, histogram_equalization, smooth_filter, sharpen_filter
+from processing import (
+    convert_grayscale, quantize_image, histogram_equalization,
+    smooth_filter, sharpen_filter, high_pass_filter, low_pass_filter
+)
 from PIL import Image
 import os
 
@@ -48,6 +51,10 @@ def process_image(operation):
         processed_img = smooth_filter(image)
     elif operation == "sharpen":
         processed_img = sharpen_filter(image)
+    elif operation == "highpass":
+        processed_img = high_pass_filter(image)
+    elif operation == "lowpass":
+        processed_img = low_pass_filter(image)
     else:
         return jsonify({"error": "Invalid operation"}), 400
 
