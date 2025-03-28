@@ -109,7 +109,7 @@ export default function ImageProcessor() {
     formData.append("file", image);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/upload", formData);
+      const res = await axios.post("https://image-enhancer-hqtl.onrender.com/upload", formData);
       return res.data.file_path;
     } catch (error) {
       console.error("Upload error:", error);
@@ -139,7 +139,7 @@ export default function ImageProcessor() {
 
     try {
       const response = await axios.post(
-        `http://127.0.0.1:5000/process/${op}`,
+        `https://image-enhancer-hqtl.onrender.com/process/${op}`,
         { file_path: filePath },
         { responseType: "blob" }
       );
@@ -156,7 +156,7 @@ export default function ImageProcessor() {
     if (!image) return;
 
     try {
-      await axios.post("http://127.0.0.1:5000/delete", { file_path: image.name });
+      await axios.post("https://image-enhancer-hqtl.onrender.com/delete", { file_path: image.name });
     } catch (error) {
       console.error("Error deleting image:", error);
     }
