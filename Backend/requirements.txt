@@ -6,4 +6,5 @@ numpy
 requests
 flask-restful
 python-dotenv
+opencv-python
 
